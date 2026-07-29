@@ -1,0 +1,23 @@
+schemaVersion: 0.1.000
+repositoryId: repo-vlutterke
+name: Vlutterke
+purpose: Bestuurde zakelijke repository voor Vlutterke.
+value: Zakelijke artifacts herkenbaar en herstelbaar beheren.
+ownership:
+  ownerDomain: 30-Zakelijk/Vlutterke
+  subjectDomains: [Vlutterke]
+  accountableRole: Operator
+classification:
+  level: Vertrouwelijk
+  containsPersonalData: false
+  containsSecrets: false
+authority:
+  canonical: Local
+  githubRemote: null
+repositoryType: organization
+backupPolicy: BP-CODE-001
+restorePriority: normal
+structure:
+  decision: ADR-GR-2026-07-29-029
+  numberedLifecycle: true
+
