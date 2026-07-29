@@ -1,0 +1,28 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+reports/
+
+# Runtime and temporary state
+.tmp-secrets-empty/
+.tmp-secrets-store/
+*.log
+tmp/
+temp/
+
+# Operating-system and editor state
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+

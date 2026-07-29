@@ -1,0 +1,14 @@
+schema_version: "1.0.0"
+repository_id: "vlutterke"
+name: "Vlutterke"
+domain: "Zakelijk"
+local_path: "C:\\GrAspe\\Zakelijk\\Repo_Vlutterke"
+target_remote: "https://github.com/GrAspe/Vlutterke.git"
+visibility_target: "private"
+status: "intake-required"
+version: "0.1.000"
+contains_personal_data: "unknown"
+contains_secrets: false
+backup_profile: "important-business"
+framework_dependency: "GrAspe/Framework"
+
