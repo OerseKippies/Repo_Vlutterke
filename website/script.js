@@ -2,7 +2,7 @@
   const config = window.VLUTTERKE || {};
 
   initAnalytics(config.analytics);
-  renderPartners(config);
+  renderNeighbors(config);
   initMotion();
 
   function initAnalytics(analytics) {
@@ -27,104 +27,36 @@
     }
   }
 
-  function renderPartners(cfg) {
-    const section = document.getElementById("partners");
-    const featuredHost = document.getElementById("partners-featured");
-    const basicHost = document.getElementById("partners-basic");
-    const limitedHost = document.getElementById("partners-limited");
-    const invite = document.getElementById("partners-invite");
-    if (!section || !featuredHost || !basicHost || !limitedHost) return;
+  function renderNeighbors(cfg) {
+    const list = document.getElementById("neighbors-list");
+    if (!list) return;
 
-    const partners = Array.isArray(cfg.partners) ? cfg.partners : [];
-    const visible = partners.filter((p) => p.status === "live" || p.status === "limited");
+    const items = (Array.isArray(cfg.neighbors) ? cfg.neighbors : []).filter(
+      (n) => n.status === "live"
+    );
 
-    featuredHost.innerHTML = "";
-    basicHost.innerHTML = "";
-    limitedHost.innerHTML = "";
+    list.innerHTML = "";
 
-    const featured = visible.filter((p) => p.status === "live" && p.tier === "featured");
-    const basic = visible.filter((p) => p.status === "live" && p.tier === "basic");
-    const limited = visible.filter((p) => p.status === "limited");
+    items.forEach((n) => {
+      const li = document.createElement("li");
+      li.className = "neighbor-item";
+      li.dataset.id = n.id;
 
-    featured.forEach((p) => featuredHost.appendChild(buildFeatured(p)));
-    basic.forEach((p) => basicHost.appendChild(buildBasic(p)));
-    limited.forEach((p) => limitedHost.appendChild(buildLimited(p)));
+      const title = n.url
+        ? `<a href="${escapeAttr(n.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(n.name)}</a>`
+        : `<span>${escapeHtml(n.name)}</span>`;
 
-    featuredHost.hidden = featured.length === 0;
-    basicHost.hidden = basic.length === 0;
-    limitedHost.hidden = limited.length === 0;
+      li.innerHTML = `
+        <div class="neighbor-name">${title}</div>
+        ${n.place ? `<div class="neighbor-place">${escapeHtml(n.place)}</div>` : ""}
+        ${n.blurb ? `<div class="neighbor-blurb">${escapeHtml(n.blurb)}</div>` : ""}
+      `;
+      list.appendChild(li);
+    });
 
-    if (invite) {
-      const email = (cfg.partnerEmail || "").trim();
-      const mailLink = invite.querySelector("[data-partner-mail]");
-      if (mailLink) {
-        if (email) {
-          mailLink.href = `mailto:${email}?subject=${encodeURIComponent("Buurtpartner 't Vlutterke")}`;
-          mailLink.hidden = false;
-        } else {
-          mailLink.hidden = true;
-        }
-      }
-    }
-
-    // Re-observe new partner nodes for motion
     if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      observeReveals(section.querySelectorAll(".partner-featured, .partner-basic, .partner-limited"));
+      observeReveals(list.querySelectorAll(".neighbor-item"));
     }
-  }
-
-  function buildFeatured(p) {
-    const article = document.createElement("article");
-    article.className = "partner-featured";
-    article.dataset.partnerId = p.id;
-
-    const media = p.image
-      ? `<div class="partner-featured-media"><img src="${escapeAttr(p.image)}" alt="" loading="lazy" /></div>`
-      : "";
-
-    article.innerHTML = `
-      ${media}
-      <div class="partner-featured-body">
-        <p class="partner-badge">Buurtpartner</p>
-        <h3>${escapeHtml(p.name)}</h3>
-        ${p.tagline ? `<p class="partner-tagline">${escapeHtml(p.tagline)}</p>` : ""}
-        ${p.description ? `<p class="partner-desc">${escapeHtml(p.description)}</p>` : ""}
-        ${
-          p.url
-            ? `<a class="btn btn-primary" href="${escapeAttr(p.url)}" target="_blank" rel="noopener noreferrer sponsored">${escapeHtml(p.cta || "Bezoek")}</a>`
-            : ""
-        }
-      </div>
-    `;
-    return article;
-  }
-
-  function buildBasic(p) {
-    const article = document.createElement("article");
-    article.className = "partner-basic";
-    article.dataset.partnerId = p.id;
-    article.innerHTML = `
-      <h3>${escapeHtml(p.name)}</h3>
-      ${p.tagline ? `<p>${escapeHtml(p.tagline)}</p>` : ""}
-      ${
-        p.url
-          ? `<a href="${escapeAttr(p.url)}" target="_blank" rel="noopener noreferrer sponsored">${escapeHtml(p.cta || "Bekijk")}</a>`
-          : ""
-      }
-    `;
-    return article;
-  }
-
-  function buildLimited(p) {
-    const el = document.createElement("li");
-    el.className = "partner-limited";
-    el.dataset.partnerId = p.id;
-    if (p.url) {
-      el.innerHTML = `<a href="${escapeAttr(p.url)}" target="_blank" rel="noopener noreferrer sponsored">${escapeHtml(p.name)}</a>`;
-    } else {
-      el.textContent = p.name;
-    }
-    return el;
   }
 
   function escapeHtml(value) {

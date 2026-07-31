@@ -1,25 +1,8 @@
 /**
- * Sitebeheer — 't Vlutterke
- * ========================
- * Pas dit bestand aan, commit & push → live.
- *
- * ANALYTICS
- * ---------
- * provider: "none" | "goatcounter" | "plausible"
- * id:
- *   - goatcounter → site-code (maak gratis account op https://www.goatcounter.com)
- *   - plausible   → domein, bv. "oersekippies.github.io"
- *
- * PARTNERS
- * --------
- * status: "live" | "limited" | "off"
- *   live     → tonen volgens tier
- *   limited  → alleen naam + link (heel beperkt), ongeacht tier
- *   off      → niet tonen
- *
- * tier: "basic" | "featured"
- *   basic    ≈ €50/jaar  — compacte vermelding
- *   featured ≈ €150/jaar — grotere plek, tekst, beeld, knop
+ * In de buurt — 't Vlutterke
+ * =========================
+ * status: "live" | "off"
+ * Geen prijzen: dit is een buurtwijzer, geen sponsorblok.
  */
 window.VLUTTERKE = {
   analytics: {
@@ -27,43 +10,62 @@ window.VLUTTERKE = {
     id: "vlutterke",
   },
 
-  partnerEmail: "",
-
-  partners: [
+  neighbors: [
     {
       id: "zoo-veldhoven",
-      status: "off",
-      tier: "featured",
+      status: "live",
       name: "Zoo Veldhoven",
-      tagline: "Op de plek van de oude camping",
-      description:
-        "Waar vroeger tenten stonden, ontdek je nu vogels, makis en een bamboo jungle. Dé bestemming voor een dagje uit in Oerle.",
+      place: "Kleine Vliet / Wintelresedijk",
+      blurb: "Op de plek van de oude camping",
       url: "https://www.zooveldhoven.nl/",
-      image: "assets/images/zoo-ingang.jpg",
-      cta: "Naar Zoo Veldhoven",
+    },
+    {
+      id: "oerse-kippies",
+      status: "live",
+      name: "Oerse Kippies",
+      place: "De Vlut",
+      blurb: "Kippen, kuikens en gekleurde eieren",
+      url: "https://oersekippies.nl/",
     },
     {
       id: "geitenboerke",
-      status: "off",
-      tier: "basic",
+      status: "live",
       name: "'t Geitenboerke",
-      tagline: "Geitenboerderij & zorgboerderij in Oerle",
-      description:
-        "Melkgeiten, producten en rondleidingen aan de Toterfout — om de hoek van de Vlut.",
+      place: "Toterfout",
+      blurb: "Geitenboerderij en zorgboerderij",
       url: "https://geitenboerke.nl/",
-      image: "",
-      cta: "Naar 't Geitenboerke",
     },
     {
       id: "dorpsgenot",
-      status: "off",
-      tier: "basic",
+      status: "live",
       name: "Gasterij 't Dorpsgenot",
-      tagline: "Eten & drinken naast de geitenboerderij",
-      description: "Horeca in Oerle, onder meer met producten van 't Geitenboerke.",
-      url: "https://geitenboerke.nl/geitenboerderij/",
-      image: "",
-      cta: "Meer info",
+      place: "Toterfout",
+      blurb: "Eten en drinken bij de geitenboerderij",
+      url: "https://www.gasterijdorpsgenot.nl/",
+    },
+    {
+      id: "oerse-have",
+      status: "live",
+      name: "d'n Oerse Have",
+      place: "Hoog Eind",
+      blurb: "Zorgboerderij met paardenpension",
+      url: "https://www.oersehave.nl/",
+    },
+    {
+      id: "oerkoi",
+      status: "live",
+      name: "Oerkoi",
+      place: "Hoog Eind",
+      blurb: "Koi, steuren en vijvers",
+      url: "https://oerkoi.nl/",
+    },
+    {
+      id: "molenvelden",
+      status: "live",
+      name: "Vakantiepark Molenvelden",
+      place: "Banstraat",
+      blurb: "Opvolger van camping 't Vlutterke",
+      url: "https://www.campings.nl/vakantiepark-molenvelden",
     },
   ],
 };
