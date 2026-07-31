@@ -6,19 +6,11 @@
   initMotion();
 
   function initAnalytics(analytics) {
-    if (!analytics || !analytics.id || analytics.provider === "none") return;
+    // GoatCounter staat als vast <script> in index.html (officiële snippet).
+    // Hier alleen Plausible of uitzetten via config.
+    if (!analytics || analytics.provider === "none") return;
 
-    if (analytics.provider === "goatcounter") {
-      window.goatcounter = { path: (p) => location.host + p };
-      const s = document.createElement("script");
-      s.async = true;
-      s.dataset.goatcounter = `https://${analytics.id}.goatcounter.com/count`;
-      s.src = "//gc.zgo.at/count.js";
-      document.head.appendChild(s);
-      return;
-    }
-
-    if (analytics.provider === "plausible") {
+    if (analytics.provider === "plausible" && analytics.id) {
       const s = document.createElement("script");
       s.defer = true;
       s.dataset.domain = analytics.id;
