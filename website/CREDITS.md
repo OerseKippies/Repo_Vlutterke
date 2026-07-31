@@ -1,7 +1,10 @@
 Beeldcredits — memorialsite 't Vlutterke
 ========================================
 
-Historische campingfoto (hero)
+Hero (kampeersfeer)
+- hero-camping.jpg — Unsplash (tent/kampvuur in bos, vlak landschap — sfeerbeeld, niet de echte camping)
+
+Historische campingfoto (archiefstrook)
 - ingang-vlutterke-1971.jpg — Ingang vakantieoord 't Vlutterke, 12-05-1971
   Fotograaf: Jos Pé
   Collectie: Regionaal Historisch Centrum Eindhoven (nr. 13503, collectie Jos-Pe)
