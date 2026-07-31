@@ -120,7 +120,7 @@ a {
   position: absolute;
   inset: 0;
   background:
-    url("assets/images/hero-camping.jpg") center center / cover no-repeat;
+    url("assets/images/hero-camping.jpg") center 45% / cover no-repeat;
   transform: scale(1.02);
   animation: hero-drift 20s var(--ease) infinite alternate;
 }
@@ -129,8 +129,8 @@ a {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(20, 28, 22, 0.25) 0%, rgba(20, 28, 22, 0.12) 42%, rgba(12, 22, 18, 0.72) 100%),
-    linear-gradient(90deg, rgba(12, 22, 18, 0.35) 0%, transparent 52%);
+    linear-gradient(180deg, rgba(18, 28, 22, 0.2) 0%, rgba(18, 28, 22, 0.08) 45%, rgba(12, 22, 18, 0.68) 100%),
+    linear-gradient(90deg, rgba(12, 22, 18, 0.28) 0%, transparent 55%);
 }
 
 .hero-content {
@@ -176,8 +176,8 @@ a {
 
 /* Archive strip — historical entrance right under hero */
 .archive-strip {
-  background: var(--forest);
-  color: rgba(255, 255, 255, 0.88);
+  background: linear-gradient(180deg, #1e3d2e 0%, #163226 100%);
+  color: rgba(255, 255, 255, 0.9);
   padding: clamp(2.5rem, 6vw, 4rem) 0;
 }
 
