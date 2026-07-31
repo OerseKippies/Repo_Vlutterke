@@ -29,4 +29,4 @@ npx --yes serve .
 - Twist: zelfde plek = Zoo Veldhoven; omgeving woont nog met plezier
 - Bronnen: Wikipedia, BHIC, RHC, Facebook-herinneringen
 
-Zie `CREDITS.md` voor beeldrechten.
+Zie `CREDITS.md` voor beeldrechten, `PARTNERS.md` voor buurtpartners en analytics.
