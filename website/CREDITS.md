@@ -1,6 +1,13 @@
 Beeldcredits — memorialsite 't Vlutterke
 ========================================
 
+Historische campingfoto (hero)
+- ingang-vlutterke-1971.jpg — Ingang vakantieoord 't Vlutterke, 12-05-1971
+  Fotograaf: Jos Pé
+  Collectie: Regionaal Historisch Centrum Eindhoven (nr. 13503, collectie Jos-Pe)
+  Via: BHIC-publicatie / RHC Eindhoven
+  Catalogus: https://www.rhc-eindhoven.nl/collectie?miadt=48&miaet=14&micode=20019&minr=5595243&mivast=48&miview=ldt&mizig=76
+
 Lokale / historische plekken (Wikimedia Commons)
 - Boerderij-Kleine-Vliet-Oerle.jpg — A. Ansems (public domain / eigen werk)
 - Zittard_Veldhoven.jpg — A. Ansems
@@ -12,13 +19,7 @@ Lokale / historische plekken (Wikimedia Commons)
 - Ringstaartmaki_in_Zoo_Veldhoven.jpg — Wikimedia Commons
 
 Sfeerbeelden (Unsplash — vrij te gebruiken)
-- camping-tent.jpg — Unsplash (kampeertent)
 - camping-avond.jpg — Unsplash (kampvuur / avond)
-- bos-pad.jpg — Unsplash (bos)
-
-Archief (niet lokaal opgeslagen, wel vermeld)
-- Ingang vakantieoord 't Vlutterke, 12-05-1971 — Jos Pé / Regionaal Historisch Centrum Eindhoven
-  https://www.rhc-eindhoven.nl/
 
 Tekstbronnen
 - Wikipedia: Vliet (Veldhoven), Zoo Veldhoven, Papegaaienpark N.O.P.

@@ -120,17 +120,18 @@ a {
   position: absolute;
   inset: 0;
   background:
-    url("assets/images/camping-tent.jpg") center / cover no-repeat;
-  transform: scale(1.04);
-  animation: hero-drift 18s var(--ease) infinite alternate;
+    url("assets/images/ingang-vlutterke-1971.jpg") center 40% / cover no-repeat;
+  filter: contrast(1.05) saturate(0.85);
+  transform: scale(1.03);
+  animation: hero-drift 22s var(--ease) infinite alternate;
 }
 
 .hero-veil {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(180deg, rgba(12, 28, 20, 0.35) 0%, rgba(12, 28, 20, 0.25) 40%, rgba(12, 28, 20, 0.78) 100%),
-    linear-gradient(90deg, rgba(12, 28, 20, 0.45) 0%, transparent 55%);
+    linear-gradient(180deg, rgba(18, 22, 18, 0.42) 0%, rgba(18, 22, 18, 0.28) 38%, rgba(12, 20, 16, 0.82) 100%),
+    linear-gradient(90deg, rgba(12, 20, 16, 0.5) 0%, transparent 58%);
 }
 
 .hero-content {
@@ -172,6 +173,29 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+.hero-credit {
+  position: absolute;
+  z-index: 3;
+  right: clamp(1rem, 3vw, 2rem);
+  bottom: 1rem;
+  margin: 0;
+  max-width: min(34rem, calc(100% - 2rem));
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.72);
+  text-align: right;
+}
+
+.hero-credit a {
+  color: rgba(255, 255, 255, 0.88);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.hero-credit a:hover {
+  color: var(--sun-soft);
 }
 
 .btn {
