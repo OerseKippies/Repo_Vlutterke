@@ -1,6 +1,6 @@
-# 't Vlutterke — memorialwebsite
+# 't Vlutterke — eerbetoon
 
-Eigentijdse herdenkingspagina voor de verdwenen camping **'t Vlutterke** in Oerle (Veldhoven).
+Eigentijdse pagina als **eerbetoon** aan camping **'t Vlutterke** in Oerle (Veldhoven).
 
 ## Keuze: HTML, geen WordPress
 
@@ -11,7 +11,7 @@ Voor dit project is een **statische HTML-site** bewust gekozen:
 - Het verhaal is grotendeels vast — geen dagelijkse contentbeheer nodig
 - Volledige controle over typografie, sfeer en beweging
 
-WordPress is handig als je later een blog, ledenportaal of veel redacteuren wilt. Voor een memorialsite is dat overkill.
+WordPress is handig als je later een blog, ledenportaal of veel redacteuren wilt. Voor een eerbetoon-pagina is dat overkill.
 
 ## Lokaal openen
 

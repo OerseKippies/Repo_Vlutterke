@@ -1,8 +1,8 @@
-Beeldcredits — memorialsite 't Vlutterke
+Beeldcredits — eerbetoon 't Vlutterke
 ========================================
 
-Hero (kampeersfeer)
-- hero-camping.jpg — Unsplash (tent/kampvuur in bos, vlak landschap — sfeerbeeld, niet de echte camping)
+Hero (doorkijk vanuit de tent)
+- hero-camping.jpg — Unsplash (view from inside tent / kampvuur & dennen — sfeerbeeld)
 
 Historische campingfoto (archiefstrook)
 - ingang-vlutterke-1971.jpg — Ingang vakantieoord 't Vlutterke, 12-05-1971
